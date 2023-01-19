@@ -6,27 +6,32 @@ public class App {
 
     public static boolean isPasswordComplex(String password) {
 
-        if (password.length() < 6) {
-            return false;
-        }
+        return password.length() >= 8
+                && password.matches(".*\\d.*")
+                && password.matches(".*[A-Z].*")
+                && password.matches(".*[a-z].*");
 
-        boolean hasUpperCase = false;
-        boolean hasLowerCase = false;
-        boolean hasNumber = false;
+        // if (password.length() < 6) {
+        // return false;2
+        // }
 
-        for (int i = 0; i < password.length() || !hasUpperCase && !hasLowerCase
-                && !hasNumber; i++) {
-            char currentDigit = password.charAt(i);
+        // boolean hasUpperCase = false;
+        // boolean hasLowerCase = false;
+        // boolean hasNumber = false;
 
-            if (Character.isDigit(currentDigit)) {
-                hasNumber = true;
-            } else if (Character.isUpperCase(currentDigit)) {
-                hasUpperCase = true;
-            } else if (Character.isLowerCase(currentDigit)) {
-                hasLowerCase = true;
-            }
-        }
-        return hasUpperCase && hasLowerCase && hasNumber;
+        // for (int i = 0; i < password.length() || !hasUpperCase && !hasLowerCase
+        // && !hasNumber; i++) {
+        // char currentDigit = password.charAt(i);
+
+        // if (Character.isDigit(currentDigit)) {
+        // hasNumber = true;
+        // } else if (Character.isUpperCase(currentDigit)) {
+        // hasUpperCase = true;
+        // } else if (Character.isLowerCase(currentDigit)) {
+        // hasLowerCase = true;
+        // }
+        // }
+        // return hasUpperCase && hasLowerCase && hasNumber;
     }
 
     public static void main(String[] args) {
