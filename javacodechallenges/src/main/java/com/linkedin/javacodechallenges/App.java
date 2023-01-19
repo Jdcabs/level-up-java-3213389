@@ -9,12 +9,15 @@ public class App {
         double waterGalloninCCF = 748;
         double minWithGallons = 2 * waterGalloninCCF;
 
-        if (gallonsUsage <= minWithGallons) {
-            return minimumCharge;
-        }
+        // if (gallonsUsage <= minWithGallons) {
+        // return minimumCharge;
+        // }
 
         double extraConsumedGallon = gallonsUsage - minWithGallons;
         double extraAmount = Math.ceil(extraConsumedGallon / waterGalloninCCF) * 3.9;
+        System.out.println(Math.ceil(extraConsumedGallon / minWithGallons) * 3.9);
+        System.out.println(extraAmount);
+        
         return minimumCharge + extraAmount;
     }
 
