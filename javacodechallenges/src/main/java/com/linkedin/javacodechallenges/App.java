@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class App {
     public static boolean isEven(int n) {
-        // todo: implement functionality
-        return false;
+        return n % 2 == 0;
     }
 
     public static void main(String[] args) {
@@ -13,7 +12,7 @@ public class App {
 
         System.out.println("Enter a number: ");
         int userNum = scanner.nextInt();
-        System.out.println("Is the number even? " + isEven(userNum));
+        System.out.println("Is the number " + userNum + " even? " + isEven(userNum));
 
         scanner.close();
     }

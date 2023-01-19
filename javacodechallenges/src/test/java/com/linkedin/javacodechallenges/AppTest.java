@@ -6,7 +6,7 @@ import static org.junit.Assert.assertFalse;
 import org.junit.Test;
 
 public class AppTest {
-    
+
     @Test
     public void isEven_true() {
         assertTrue(App.isEven(0));
