@@ -14,8 +14,8 @@ public class App {
         boolean hasLowerCase = false;
         boolean hasNumber = false;
 
-        for (int i = 0; i < password.length() || !hasUpperCase || !hasLowerCase
-                || !hasNumber; i++) {
+        for (int i = 0; i < password.length() || !hasUpperCase && !hasLowerCase
+                && !hasNumber; i++) {
             char currentDigit = password.charAt(i);
 
             if (Character.isDigit(currentDigit)) {
